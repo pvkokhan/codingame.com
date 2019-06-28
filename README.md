@@ -1,0 +1,1 @@
+# codingame_js_medium
