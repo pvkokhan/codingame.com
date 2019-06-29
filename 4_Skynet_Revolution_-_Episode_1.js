@@ -21,13 +21,12 @@ for (let i = 0; i < E; i++) {
     var EI = parseInt(readline()); // the index of a gateway node
     exit[i] = EI;
     activeExit = EI;
-
 }
 
 // game loop
 while (true) {
     var SI = parseInt(readline()); // The index of the node on which the Skynet agent is positioned this turn
-
+    
       // выбираем "активный выход", к которому ближе всего вирус
     for (let j=0; j<exit.length;j++){
         if (findInArr (exit[j], SI) === true){
@@ -52,13 +51,9 @@ while (true) {
                  arr.splice(i, 1)
                  break;
              }
-            }
+         }
+    }
 }
-   
-  
-}
-
-
 //так как indexOf() в многомерном массиве не работает
 //пишем функцию аналог IndexOf() для многомерного массива
 function findInArr (X, Y) {
@@ -67,6 +62,5 @@ function findInArr (X, Y) {
       if (arr[i][0] == X && arr[i][1] == Y){
         return true;
       }
-
       } return false;
     }
