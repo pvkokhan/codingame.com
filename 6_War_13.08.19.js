@@ -4,14 +4,16 @@
  **/
 
 let winner = 0, count = 0;
-let J = 11, Q = 12, K = 13, A = 14;
+let strengthOfCards = {
+    "2" : 2, "3":3, "4":4, "5":5, "6":6, "7":7, "8":8, "9":9, "10":10, "J":11, "Q":12, "K":13, "A":14 
+}
 let player1Cards = [], player2Cards = [], warPl1 = []; warPl2 = [];
 
 const n = parseInt(readline()); // the number of cards for player 1
 for (let i = 0; i < n; i++) {
     const cardp1 = readline(); // [n] cards of player 1
     //translate cards into numerical values and written to the array
-    player1Cards.push(eval(cardp1.slice(0, -1)));
+    player1Cards.push(strengthOfCards[cardp1.slice(0, -1)]);
 }
 
 const m = parseInt(readline()); // the number of cards for player 2
@@ -19,7 +21,7 @@ const m = parseInt(readline()); // the number of cards for player 2
 for (let i = 0; i < m; i++) {
     const cardp2 = readline(); // [m] cards of player 2
     //translate cards into numerical values and written to the array
-    player2Cards.push(eval(cardp2.slice(0, -1)));
+    player2Cards.push(strengthOfCards[cardp1.slice(0, -1)]);
 }
 
 
